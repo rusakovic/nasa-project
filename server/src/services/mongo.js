@@ -12,6 +12,7 @@ mongoose.connection.on("error", (err) => {
   console.error(err);
 });
 
+mongoose.set("strictQuery", false);
 async function mongoConnect() {
   await mongoose.connect(MONGO_URL);
 }
